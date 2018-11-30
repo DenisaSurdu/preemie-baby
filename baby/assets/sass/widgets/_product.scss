@@ -1,0 +1,87 @@
+.product {
+  h1{
+    @include font-size(30px);
+    font-weight: bold;
+    border-bottom: 1px solid $grey80;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    text-transform: capitalize;
+  }
+
+  .product-brand{
+    span{
+      display: inline-block;
+      margin-left: 3px;
+      a{
+        color: $kaky;
+      }
+    }
+  }
+  .product-sku{
+    span{
+      display: inline-block;
+      margin-left: 3px;
+      div{
+        color: $kaky;
+      }
+    }
+  }
+  .product-category{
+    div{
+      display: inline-block;
+      margin-left: 3px;
+      a{
+        color: $kaky;
+      }
+    }
+  }
+
+  .product-description{
+    h4{
+      @include font-size(15px);
+      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 31px;
+    }
+    p{
+      color: $grey52;
+      @include font-size(13px);
+      line-height: 21px;
+    }
+  }
+
+  .product-price{
+    margin-top:20px;
+    div{
+      color: $charcoal;
+      @include font-size(29px);
+      font-weight: bold;
+    }
+  }
+
+  .product-buy-link {
+    text-align: center;
+    @include mq('tablet'){
+      text-align: left;
+    }
+    a {
+      @include font-size(17px);
+      width: 226px;
+      max-width: 100%;
+      margin-top:20px;
+      border: 1px solid $bright-red;
+      background: $bright-red none repeat scroll 0 0;
+      text-transform: uppercase;
+      text-align: center;
+      color:$white;
+      &:hover{
+        background: $white;
+        color:$bright-red;
+      }
+    }
+    p{
+      color: $kaky;
+    }
+
+  }
+}

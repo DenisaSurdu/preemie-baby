@@ -1,0 +1,14 @@
+global-styling:
+   css:
+    theme:
+      #css/your_style_sheet.css : {}
+      css/bootstrap4.6.min.css : {}
+      https://use.fontawesome.com/556d3e40f8.css: {type: external, minified: true }
+      css/style.css : {}
+      css/parallax.css : {}
+   js:
+     #js/your_js.js : {}
+     js/cache.js : {}
+     js/bundle.min.js : {attributes: { async: true }}
+     /modules/custom/parallax_configurator/js/Parallax.js : {attributes: { async: true }}
+     /modules/custom/bkr_amazon_cart/js/BkrCart.js : {attributes: { async: true }}

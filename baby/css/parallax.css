@@ -1,0 +1,22 @@
+/*
+  PARALLAX
+*/
+.parallax-wrapper {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  clear: both;
+  z-index: 0; }
+  .parallax-wrapper .parallax-image {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    position: relative;
+    overflow-y: hidden; }
+  .parallax-wrapper .parallax-link-to {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1; }

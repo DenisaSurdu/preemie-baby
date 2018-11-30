@@ -1,0 +1,98 @@
+.views-exposed-form,
+#views-exposed-form-product-search-page-1{
+  @include font-face();
+  label {
+    display: block;
+    @include font-size(16px);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  select {
+    border: 1px solid $grey94;
+    height: 40px;
+    margin: 0 6px 20px 0;
+    padding: 0 0 0 10px;
+    width: 100%;
+    display: block;
+    @include font-size(14px);
+    @include mq(tablet,max){
+      margin:0;
+    }
+  }
+
+  input {
+    text-align: center;
+    @include font-size(17px);
+    width: 226px;
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid $kaky;
+    background: $kaky none repeat scroll 0 0;
+    text-transform: uppercase;
+    color: $white;
+    &#edit-submit-product-search{
+     width: 45%;
+    }
+    &#edit-reset{
+      width: 45%;
+    }
+  }
+}
+
+.product-filter-title{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.filter-products{
+  text-align: right;
+  .filter-label{
+    color: $kaky;
+    cursor: pointer;
+    i{
+      @include font-size(30px);
+    }
+  }
+
+}
+.filter-products-menu{
+  text-align: right;
+  position: fixed;
+  top: 5px;
+  height: 45px;
+  width: 25%;
+  right: 10px;
+  z-index: 2;
+
+}
+
+.search-page-filter {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  z-index: 8;
+  top: 0;
+  right: 0;
+  margin: 0 -250px 0 0;
+  background: $white;
+  padding: 10px;
+  overflow-y: auto;
+  @include transition(all 200ms ease-in);
+  //Do not display this menu on screens bigger the 1024px
+  @include mq(tablet-wide) {
+    display: none;
+  }
+  .form-actions{
+    text-align: center;
+  }
+
+  .close-menu{
+    @include font-size(24px);
+    line-height: 1.5;
+    text-align: right;
+    float: right;
+    display: block;
+    width: 100%;
+    margin-right: 10px;
+  }
+}

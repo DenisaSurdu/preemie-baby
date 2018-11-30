@@ -1,0 +1,14 @@
+.sticky-leftSideFilters{
+  @include transition(height 2s);
+  transition-timing-function: ease-in-out;
+  position: fixed;
+  top: 50px;
+  z-index: 2;
+  background: $white;
+  @include mq('tablet'){
+    width:215px;
+  }
+  @include mq('desktop'){
+    width:255px;
+  }
+}

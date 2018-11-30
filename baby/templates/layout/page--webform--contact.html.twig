@@ -1,0 +1,67 @@
+<div class="container">
+
+    <header class="row" role="banner">
+        <a id="left-menu" class="hidden-lg-up main-menu-mobile">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <div class="responsive-main-menu">
+            <i class="fa fa-times-circle-o close-menu" aria-hidden="true"></i>
+            <div class="clearfix"></div>
+        </div>
+        <div class="container">
+            {{ page.header }}
+            {{ page.primary_menu }}
+        </div>
+    </header>
+</div>
+
+{% include  directory ~ '/templates/layout/google_maps.html.twig' %}
+
+<div class="container">
+
+    <main class="row">
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+            {#{{ page.breadcrumb }}#}
+            <div class="contact-message-header">
+                <h5>Get in Touch</h5>
+                <p>
+                    Please fill out the quick form and we will respond as soon as we can.
+                </p>
+            </div>
+            {{ page.content  }}
+        </div>
+        <div class="col">
+            <div class="contact-socialMedia-address">
+                <h5>Get Social</h5>
+                {% include  directory ~ '/templates/layout/socialMedia.html.twig' %}
+                <div class-="business-address">
+                    <h5> Contact Info </h5>
+
+                    <p>Bokar Solutions Limited
+                    <p>71-75 Shelton Street</p>
+                    <p>Covent Garden</p>
+                    <p>London</p>
+                    <p>WC2H 9JQ</p>
+                </div>
+            </div>
+        </div>{# /.layout-content #}
+
+
+    </main>
+</div>
+
+<div class="parallax-wrapper"></div>
+
+<div class="footer-wrapper">
+    <div class="container">
+        {% if page.footer %}
+            <footer role="contentinfo" class="row">
+                {{ page.footer }}
+            </footer>
+        {% endif %}
+
+    </div>{# /.layout-container #}
+</div>
+

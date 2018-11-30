@@ -1,0 +1,170 @@
+header {
+  @include font-face();
+  @include mq(tablet-wide){
+    min-height: 100px;
+  }
+  nav {
+    background: $white;
+    height:50px;
+    margin-bottom:25px;
+    @include mq(tablet-wide,max){
+      height:0px;
+      margin-bottom:0px;
+    }
+    ul {
+      text-align: center;
+      &.menu{
+        height: 50px;
+        vertical-align: middle;
+        line-height: 3;
+        padding: 0;
+        margin: 0;
+        &.sticky-menu{
+          @include transition(height 2s);
+          transition-timing-function: ease-in-out;
+          position: fixed;
+          top: 0;
+          z-index: 2;
+          background: $white;
+          left: 0;
+          right: 0;
+        }
+      }
+      li {
+        display: inline-block;
+        position: relative;
+        a {
+          @include font-size(16px);
+          padding: 16px 20px;
+          text-transform: uppercase;
+        }
+        .arrow-up{
+          display: none;
+        }
+        ul.menu {
+          display: none;
+          position: absolute;
+          padding:0;
+          background: $white;
+          z-index:1;
+          max-width: 320px;
+          height: auto;
+          margin: 0;
+          li{
+            display: block;
+            background: $white;
+            text-align: left;
+            white-space: nowrap;
+            a{
+              width: 100%;
+              padding:0 0 0 10px;
+            }
+          }
+        }
+        &:hover{
+          ul{
+            display: block;
+          }
+          .arrow-up{
+            display: block;
+            margin:0 auto;
+          }
+        }
+      }
+    }
+  }
+  .responsive-main-menu{
+    position: fixed;
+    height:100%;
+    width:250px;
+    z-index: 7;
+    top:0;
+    left:0;
+    margin:0 0 0 -250px;
+    background: $white;
+    @include transition(all 200ms ease-in);
+    //Do not display this menu on screens bigger the 1024px
+    @include mq(tablet-wide) {
+      display: none;
+      visibility: hidden;
+    }
+    .close-menu{
+      @include font-size(24px);
+      line-height: 2;
+      text-align: right;
+      float: right;
+      display: block;
+      width: 100%;
+      margin-right: 10px;
+    }
+    .menu{
+      padding:0;
+      margin:0;
+      text-align: left;
+      li{
+        display: block;
+        width: 100%;
+        line-height: 1;
+        a{
+          display: block;
+        }
+        ul{
+          position: inherit;
+          &.menu{
+           bottom:0;
+           line-height: 1;
+            a{
+              @include font-size(16px);
+              padding: 16px 20px;
+              text-transform: uppercase;
+              text-indent: 20px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .main-menu-mobile{
+    @include font-size(30px);
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    z-index: 2;
+    height:50px;
+    text-indent: 5px;
+  }
+
+  // mobile logo
+  #top-menu-logo{
+    position: fixed;
+    top: 3px;
+    width: 50px;
+    height: auto;
+    z-index: 5;
+    clear: both;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .logo{
+    @include mq(tablet-wide,max){
+      margin-top: 80px;
+    }
+    margin-top:55px;
+    margin-bottom: 25px;
+    img{
+      max-width: 100px;
+      display: inline-block;
+      margin-top: -20px;
+    }
+    h1{
+      display: inline-block;
+      margin-left:20px;
+      text-transform: uppercase;
+    }
+  }
+}

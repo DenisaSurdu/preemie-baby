@@ -1,0 +1,55 @@
+* {
+  color: $charcoal;
+
+  ul {
+    list-style: outside none none;
+  }
+
+  a {
+    color: $charcoal;
+    @include transition(color .3s ease);
+    &:hover {
+      color: $blue-gray;
+      text-decoration: none;
+    }
+  }
+  .visually-hidden{
+    display: none;
+    visibility: hidden;
+  }
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid $grey80;
+  }
+  .absolute-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    text-indent: -80px;
+  }
+  .generic-title{
+    border-bottom: 3px solid $light-blue;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .views-more-link{
+    color: $kaky;
+  }
+
+  .bkr-add-to-cart{
+    position: absolute;
+    bottom: 0;
+    right:15px;
+    z-index: 2;
+    @include font-size(35px);
+    cursor:pointer;
+    padding:5px;
+  }
+}

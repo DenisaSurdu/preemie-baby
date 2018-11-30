@@ -1,0 +1,20 @@
+name: Baby
+type: theme
+description: baby theme
+package: Bokar Solutions
+core: 8.x
+libraries:
+  - baby/global-styling
+ 
+base theme: false
+
+regions:
+  content: Content
+  header: Header
+  sidebar: Sidebar
+  sidebar_right: Sidebar Right
+  bottom: Bottom Content
+  footer: Footer
+
+libraries-override:
+  system/base: false

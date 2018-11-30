@@ -1,0 +1,122 @@
+.bkr-cart-viewer-wrapper{position: fixed;
+  height: 100%;
+  width: 320px;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  margin: 0 -320px 0 0;
+  background: $white;
+  padding: 10px;
+  overflow-y: auto;
+  @include transition(all 200ms ease-in);
+  &.bkr-cart-expand{
+    margin:0;
+  }
+
+  h2{
+    @include font-size(22px);
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+  }
+  .bkr-cart-checkout{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+    line-height: 3;
+    background: $kaky none repeat scroll 0 0;
+  }
+  .bkr-cart-total-amount{
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    left:0;
+    right:0;
+  }
+  .bkr-cart-product-list{
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 100px;
+    bottom: 160px;
+    left: 20px;
+    right: 20px;
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+    li{
+      position: relative;
+      margin-top:20px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $kaky;
+      img{
+        max-height: 120px;
+        height: auto;
+        width: auto;
+        float: left;
+        padding-right: 10px;
+        padding-bottom: 10px;
+      }
+      h5{
+        @include font-size(12px);
+        display: inline-block;
+        width: 200px;
+      }
+      .product-cart-price{
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+      }
+      .product-cart-quantity{
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+      }
+      .product-cart-divider{
+        clear: both;
+        margin-bottom: 5px;
+      }
+      .product-cart-remove{
+        display: block;
+        width: 100%;
+        text-align: center;
+        small{
+          color: $grey52;
+        }
+      }
+      .bkr-cart-checkout{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .bkr-cart-footer{
+    display: block;
+    left:0;
+    right:0;
+    height:125px;
+    background: $white;
+    position: absolute;
+    bottom: 50px;
+  }
+}
+
+  .product-details {
+    position: relative;
+    padding:10px;
+    overflow: hidden;
+    .product-top{
+      max-width: 150px;
+      float: left;
+    }
+    .product-overlay{
+      clear: both;
+      p{
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }

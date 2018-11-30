@@ -1,0 +1,72 @@
+<article class="clearfix container {{ attributes.class }}"{{ attributes }}>
+<div class="row product" itemscope itemtype="http://schema.org/Product">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+
+        {% if content.field_image[0] %}
+            <img src="{{ content.field_image[0]}}" class="img-fluid" alt="{{ label[0] }}" itemprop="image">
+
+        {% else %}
+            <img src="{{ content.field_image_url[0]}}" class="img-fluid" alt="{{ label[0] }}" itemprop="image">
+        {% endif %}
+    </div>
+    <div class="col">
+        <div class="socialMedia"></div>
+        <div class="product-brand">
+            <small>Brand:</small>
+            <span>
+                <small itemprop="brand">
+                    {{ content.field_brand }}
+                </small>
+            </span>
+        </div>
+        <div class="product-sku" >
+            <small>SKU:</small>
+            <span>
+                <small itemprop="sku">
+                    {{ content.field_asin_isbn }}
+                </small>
+            </span>
+        </div>
+        <div class="product-price" itemscope itemtype="http://schema.org/PriceSpecification">
+            <span itemprop="price">
+            {{ content.field_price }}
+                <meta itemprop="priceCurrency" content="GBP" />
+            </span>
+        </div>
+        <div class="product-description">
+            <h4>Quick Overview</h4>
+            <p itemprop="description">
+                {{ content.field_descr }}
+            </p>
+        </div>
+        {% if content.field_category[0] %}
+        <div class="product-category">
+            <small>Tags:</small>
+            <span>
+                <small itemprop="category">
+                    {{ content.field_category }}
+                </small>
+            </span>
+        </div>
+        {% endif %}
+        <div class=" product-buy-link">
+            {% if content.field_out_of_stock[0] %}
+                <a href="#out-of-stock" title="Out of stock" class="btn btn-default">
+                    Out of stock
+                </a>
+            {% else %}
+            <a href="{{ content.field_referral_link[0] }}" target="_blank" title="{{ label[0] }}" class="btn btn-default">
+                Buy now
+            </a>
+            {% if content.field_buy_from[0] %}
+                <small>
+                    <p>From {{ content.field_buy_from[0] }}</p>
+                </small>
+            {% endif %}
+
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+</article>

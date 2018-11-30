@@ -1,0 +1,24 @@
+<div class="col-12 text-center">
+    <div class="socialMedia-wrapper">
+        <h6>STAY IN TOUCH</h6>
+        {% include  directory ~ '/templates/layout/socialMedia.html.twig' %}
+    </div>
+
+    <div class="copyright">
+       <small>
+           ©
+           {% if "now"|date("Y") == 2017 %}
+               {{ "now"|date("Y") }}
+           {% else %}
+               2017 - {{ "now"|date("Y") }}
+           {% endif %}
+
+           Bokar Solutions Ltd. All Rights Reserved.
+       </small>
+    </div>
+
+    <div>
+        {{ content }}
+    </div>
+</div>
+

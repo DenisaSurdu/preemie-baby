@@ -1,0 +1,12 @@
+{% for row in rows %}
+    {% set productIndex = loop.index0 %}
+    {% if productIndex%4 == 0 %}
+        <div class="card-group">
+            {% for row in rows|slice(productIndex,4) %}
+                <div class="card col-md-3 col-sm-6 col-xs-12">
+                    {{ row }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endfor %}

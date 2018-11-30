@@ -1,0 +1,88 @@
+.card-group{
+  margin: 20px 0 20px 0;
+  .card{
+    margin-bottom: 0;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+    @include mq(tablet,max){
+      margin-bottom: 10px;
+    }
+    @include border-all(1px, solid, $grey94 $grey94 $grey80);
+    @include transition(.3s ease 0s);
+    &:hover{
+      margin-top: -5px;
+      padding-bottom: 5px;
+      @include box-shadow(0, 8px, 20px, $grey87);
+    }
+    .overlap-anchor{
+      a{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-indent: -100px;
+      }
+    }
+    .card-block,
+    .card-body{
+      @include font-size(14px);
+      padding: 0;
+      .card-title{
+        @include font-size(14px);
+        text-transform: capitalize;
+        padding:7px;
+
+      }
+    }
+    .card-footer{
+      border: none;
+      margin-top:10px;
+      background: transparent;
+      @include font-size(18px);
+      .text-footer{
+        position: absolute;
+        bottom:5px;
+        margin:0;
+        @include font-size(18px);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.category-card-deck{
+  margin-top: 30px;
+
+  .block-title{
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2{
+      border-bottom: 3px solid $light-blue;
+      padding-bottom: 10px;
+      position: relative;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+  }
+}
+
+.related-products-card-deck{
+  margin-top: 30px;
+
+  .block-title{
+    margin-bottom: 30px;
+
+    h2{
+      border-bottom: 3px solid $light-blue;
+      padding-bottom: 10px;
+      position: relative;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
